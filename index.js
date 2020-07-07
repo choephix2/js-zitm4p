@@ -1,5 +1,3 @@
-import "./style.css";
-
 const INDEX_SLOTS = {
   html: `
   <div>
@@ -7,7 +5,7 @@ const INDEX_SLOTS = {
     <div>...</div>
   </div>
   `,
-  scripts: ["common.js", "slots.js"]
+  scripts: ["slots.js"]
 };
 
 const INDEX_LIVE_CASINO = {
@@ -17,7 +15,7 @@ const INDEX_LIVE_CASINO = {
     <div>[ le game ]</div>
   </div>
   `,
-  scripts: ["common.js", "live-casino.js"]
+  scripts: ["live-casino.js"]
 };
 
 const queryString = window.location.search;
@@ -30,6 +28,6 @@ const index_contents =
 document.body.innerHTML = index_contents.html;
 for (let src of index_contents.scripts) {
   let el = document.createElement("script");
-  el.src = `https://github.com/choephix2/js-zitm4p/blob/master/scripts/` + src + `?raw=true`;
+  el.src = `scripts/` + src + `?raw=true`;
   document.body.appendChild(el);
 }

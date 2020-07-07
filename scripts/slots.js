@@ -1,3 +1,15 @@
-alert(`Henlo slops`);
+function trace( ...args )
+{
+  const f = () =>
+    args.forEach( o => {
+      console.log( o )
+      document.body.innerHTML += `<pre>${ o }</pre>`
+    } )
 
-document.body.innerHTML += `<code>Henlo slops</code>`;
+  if ( document.readyState === "complete" )
+    f()
+  else
+    window.addEventListener( `load`, f )
+}
+
+trace(`Henlo slops`);
