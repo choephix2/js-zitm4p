@@ -1,4 +1,4 @@
-import "./styles.css";
+import "./style.css";
 
 const INDEX_SLOTS = {
   html: `
@@ -6,9 +6,8 @@ const INDEX_SLOTS = {
     <h1>Slots Game</h1>
     <div>...</div>
   </div>
-  <script src="/slots.js"></script>
   `,
-  scripts: ["/common.js", "/slots.js"]
+  scripts: ["common.js", "slots.js"]
 };
 
 const INDEX_LIVE_CASINO = {
@@ -17,9 +16,8 @@ const INDEX_LIVE_CASINO = {
     <h1>Live Casino Game</h1>
     <div>[ le game ]</div>
   </div>
-  <script src=></script>
   `,
-  scripts: ["/common.js", "/live-casino.js"]
+  scripts: ["common.js", "live-casino.js"]
 };
 
 const queryString = window.location.search;
@@ -32,6 +30,6 @@ const index_contents =
 document.body.innerHTML = index_contents.html;
 for (let src of index_contents.scripts) {
   let el = document.createElement("script");
-  el.src = `src` + src;
+  el.src = `https://github.com/choephix2/js-zitm4p/blob/master/scripts/` + src + `?raw=true`;
   document.body.appendChild(el);
 }
