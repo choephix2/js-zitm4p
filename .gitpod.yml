@@ -1,2 +1,5 @@
 tasks:
   - init: npm install -g serve && npx serve -l 3000
+ports:
+  - port: 3000
+    onOpen: open-preview
